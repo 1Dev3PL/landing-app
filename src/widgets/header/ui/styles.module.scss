@@ -1,0 +1,36 @@
+.main_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo {
+        .img {
+
+        }
+    }
+
+    .navigation {
+        width: 40%;
+        display: flex;
+        gap: 35px;
+
+        .nav_link {
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #2C272B;
+        }
+    }
+
+    .phone_number_container {
+        .phone_number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: #12A996;
+        }
+    }
+}
+
