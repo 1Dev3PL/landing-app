@@ -7,9 +7,11 @@ type TContentProps = {
     className?: string;
 }
 
-export const Content = ({children, className}: TContentProps) => {
+export const Content = (props: TContentProps) => {
+    const {children, className} = props;
+
     return (
-        <div className={ classNames(styles.panel , className)}>
+        <div className={ classNames(styles.container, className)}>
             {children}
         </div>
     );

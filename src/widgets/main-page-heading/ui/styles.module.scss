@@ -1,0 +1,18 @@
+@use 'shared/themes/_variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    .upper_container {
+        display: flex;
+        
+        .column {
+            width: 575px;
+        }
+    }
+
+    .lower_container {
+        display: flex;
+    }
+}
