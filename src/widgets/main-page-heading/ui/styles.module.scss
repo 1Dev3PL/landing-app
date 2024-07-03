@@ -1,4 +1,4 @@
-@use 'shared/themes/_variables.scss';
+@import 'shared/themes/_variables.scss';
 
 .container {
     display: flex;
@@ -6,13 +6,62 @@
 
     .upper_container {
         display: flex;
-        
+        margin-bottom: 10px;
+
         .column {
             width: 575px;
+            height: 400px;
+            
+            .header {
+                padding-left: 46px;
+                padding-right: 200px;
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 105%;
+                letter-spacing: -2%;
+                text-align: left;
+                color: $base-color;
+                margin-bottom: 55px;
+            }
+
+            .text_with_logo {
+                display: flex;
+                padding-left: 49px;
+
+                .text {
+                    width: 292px;
+                    height: 36px;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: -2%;
+                    margin-right: 19px;
+                }
+            }
+
+            .buttons_container {
+                display: flex;
+                gap: 10px;
+                padding-top: 72px;
+                padding-left: 50px;
+                padding-bottom: 41px;
+
+                .left_button {
+                    background-color: $base-cyan;
+                    color: #FCFCFC;
+                    
+                }
+            }
         }
     }
 
     .lower_container {
         display: flex;
+        gap: 10px;
+
+        .small_panel {
+            height: 163px;
+            width: 282px;
+        }
     }
 }

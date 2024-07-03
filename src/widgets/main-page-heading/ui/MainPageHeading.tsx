@@ -12,10 +12,14 @@ export const MainPageHeading = () => {
         <div className={ styles.container }>
             <div className={ styles.upper_container }>
                 <Panel className= { styles.column }>
-                    <h2 className={ styles.header }>Нерудные материалы</h2>
+                    <h1 className={ styles.header }>Нерудные материалы</h1>
                     <div className={ styles.text_with_logo }>
                         <div className={ styles.text }>Петратерра — аккредитованный дистрибьютор ПНК</div>
                         <img src={ logo } alt="pnk_logo" />
+                    </div>
+                    <div className={ styles.buttons_container }>
+                        <button className={ styles.left_button }>Каталог продукции</button>
+                        <button className={ styles.right_button }>Оставить заявку</button>
                     </div>
                 </Panel>
                 <div className={ styles.column }>
