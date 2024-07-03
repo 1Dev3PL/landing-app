@@ -4,17 +4,14 @@ import classNames from 'classnames';
 
 type TContentProps = {
     children: ReactNode;
-    className?: string;
-    classNameChild?: string;
-
 }
 
 export const Content = (props: TContentProps) => {
-    const {children, className, classNameChild} = props;
+    const {children} = props;
     
     return (
-        <div className={ classNames(styles.container , className)}>
-            <div className={ classNames(styles.inner_container, classNameChild)}>
+        <div className={ classNames(styles.container)}>
+            <div className={ classNames(styles.inner_container)}>
                 {children}
             </div>
         </div>
