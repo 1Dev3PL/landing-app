@@ -1,7 +1,7 @@
-@import "shared/themes/_variables";
+@use "shared/themes/_variables" as *;
 
 .panel {
     border-radius: 5px;
-    background-color: $gray-color-main;
-    color: $base-color;
+    background-color: $base-gray;
+    color: $text-base;
 }

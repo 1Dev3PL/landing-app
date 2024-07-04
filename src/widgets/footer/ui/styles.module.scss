@@ -1,4 +1,4 @@
-@import "shared/themes/_variables";
+@use "shared/themes/_variables" as *;
 
 .footer {
   height: 322px;
@@ -16,7 +16,7 @@
     .upper_container {
       display: flex;
       justify-content: space-between;
-      color: $base-color;
+      color: $text-base;
       border-bottom: 1px solid #D7D7D7;
       padding-bottom: 40px;
       margin-top: 40px;
@@ -55,7 +55,7 @@
 
           .link {
             text-decoration: none;
-            color: $base-color;
+            color: $text-base;
 
             font-weight: 400;
             font-size: 15px;
