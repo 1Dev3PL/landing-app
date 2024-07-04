@@ -5,13 +5,14 @@ import hammer from 'shared/assets/icons/hammer.svg'
 import marker from 'shared/assets/icons/marker.svg'
 import crane from 'shared/assets/icons/crane.svg'
 import building from 'shared/assets/icons/building.svg'
+import video from 'shared/assets/videos/Deftones.mp4'
 
 export const MainPageHeading = () => {
 
     return(
         <div className={ styles.container }>
             <div className={ styles.upper_container }>
-                <Panel className= { styles.column }>
+                <Panel className= { styles.left_column }>
                     <h1 className={ styles.header }>Нерудные материалы</h1>
                     <div className={ styles.text_with_logo }>
                         <div className={ styles.text }>Петратерра — аккредитованный дистрибьютор ПНК</div>
@@ -22,31 +23,31 @@ export const MainPageHeading = () => {
                         <button className={ styles.right_button }>Оставить заявку</button>
                     </div>
                 </Panel>
-                <div className={ styles.column }>
-
-                </div>
+                <Panel className={ styles.right_column }>
+                    <video autoPlay muted loop src={ video } className={ styles.video } />
+                </Panel>
             </div>
             <div className={ styles.lower_container }>
                 <Panel className={ styles.small_panel }>
-1                   <img src={ hammer } alt="hammer" />
+                    <img src={ hammer } alt="hammer" className={ styles.icon } />
                     <div className={ styles.text }>
                         Работаем напрямую с производителем материалов
                     </div>
                 </Panel>
                 <Panel className={ styles.small_panel }>
-1                   <img src={ marker } alt="marker" />
+                    <img src={ marker } alt="marker" className={ styles.icon } />
                     <div className={ styles.text }>
                         Карьер завода находится в Выборгском районе ЛО
                     </div>
                 </Panel>
                 <Panel className={ styles.small_panel }>
-1                   <img src={ crane } alt="crane" />
+                    <img src={ crane } alt="crane" className={ styles.icon } />
                     <div className={ styles.text }>
                         Удобная площадка для погрузки
                     </div>
                 </Panel>
                 <Panel className={ styles.small_panel }>
-1                   <img src={ building } alt="building" />
+                    <img src={ building } alt="building" className={ styles.icon } />
                     <div className={ styles.text }>
                         Материалы всегда в наличие на нашем складе
                     </div>
