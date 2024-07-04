@@ -1,3 +1,5 @@
+@use "shared/themes/_variables.scss" as *;
+
 .main_container {
     width: 100%;
     display: flex;
@@ -12,7 +14,7 @@
             text-decoration: none;
             font-size: 15px;
             font-weight: 400;
-            color: #2C272B;
+            color: $text-base;
         }
     }
 
@@ -20,7 +22,7 @@
         .phone_number {
             font-weight: 600;
             font-size: 20px;
-            color: #12A996;
+            color: $ultramarine;
         }
     }
 }

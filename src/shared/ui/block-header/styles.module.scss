@@ -1,0 +1,32 @@
+@use "shared/themes/_variables.scss" as *;
+
+.block_header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 2rem;
+
+  &_ultramarine {
+    background-color: $ultramarine;
+  }
+
+  &_gray {
+    background-color: $base-gray;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+
+    &_ultramarine {
+      color: $text-white;
+    }
+
+    &_gray {
+      color: $text-base;
+    }
+
+  }
+}
