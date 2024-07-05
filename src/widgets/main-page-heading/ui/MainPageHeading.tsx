@@ -6,6 +6,7 @@ import marker from 'shared/assets/icons/marker.svg'
 import crane from 'shared/assets/icons/crane.svg'
 import building from 'shared/assets/icons/building.svg'
 import video from 'shared/assets/videos/Deftones.mp4'
+import { Button } from 'shared/ui/button/Button';
 
 export const MainPageHeading = () => {
 
@@ -19,8 +20,8 @@ export const MainPageHeading = () => {
                         <img src={ logo } alt="pnk_logo" />
                     </div>
                     <div className={ styles.buttons_container }>
-                        <button className={ styles.left_button }>Каталог продукции</button>
-                        <button className={ styles.right_button }>Оставить заявку</button>
+                        <Button title="Каталог продукции" color="ultramarine" />
+                        <Button title="Оставить заявку" color="gray" className={ styles.right_button } />
                     </div>
                 </Panel>
                 <Panel className={ styles.right_column }>

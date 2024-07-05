@@ -23,7 +23,7 @@
                 line-height: 63px;
                 letter-spacing: -2%;
                 text-align: left;
-                color: $base-color;
+                color: $text-base;
                 margin-bottom: 55px;
             }
 
@@ -50,7 +50,7 @@
                 padding-bottom: 41px;
 
                 .left_button {
-                    background-color: $base-cyan;
+                    background-color: $ultramarine;
                     color: #FCFCFC;
                     border: none;
                     width: 205px;
@@ -63,9 +63,8 @@
                 
                 .right_button {
                     background-color: #BDBDBD;
-                    color: $base-color;
+                    color: $text-base;
                     border: none;
-                    width: 184px;
                     height: 51px;
                     border-radius: 50px;
                     font-size: 15px;
@@ -90,7 +89,6 @@
         gap: 10px;
 
         .small_panel {
-            height: 163px;
             flex-basis: 25%;
             display: flex;
             flex-direction: column;
@@ -107,7 +105,7 @@
                 padding-left: 30px;
                 padding-bottom: 30px;
                 padding-right: 49px;
-                color: $base-color;
+                color: $text-base;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 19.6px;
