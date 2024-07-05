@@ -1,0 +1,13 @@
+@use "shared/themes/_variables" as *;
+
+.fraction_label {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.15px;
+  letter-spacing: -0.03em;
+  background-color: $base-gray;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
