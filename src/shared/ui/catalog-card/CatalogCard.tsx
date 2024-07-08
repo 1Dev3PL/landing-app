@@ -29,7 +29,9 @@ export const CatalogCard = (props: TCardProps) => {
             <div className={styles.description}>{description}</div>
             <div className={styles.fractions_container}>
                 {fractions.map((fr, idx) => <FractionLabel key={idx} label={fr}/>)}
-                <Button title={"Все виды"} color={"ultramarine"} size={"small"} onClick={() => handleButtonClick()}/>
+                <Button color={"ultramarine"} size={"small"} onClick={() => handleButtonClick()}>
+                    Все виды
+                </Button>
             </div>
         </Panel>
     )

@@ -30,7 +30,9 @@ export const CatalogGrid = (props: TCatalogContainerProps) => {
             </div>
             {!isShowedMore &&
                 <div className={styles.button_container}>
-                    <Button title={"Показать ещё"} color={"ultramarine"} onClick={() => handleShowMore()}/>
+                    <Button color={"ultramarine"} onClick={() => handleShowMore()}>
+                        Показать ещё
+                    </Button>
                 </div>
             }
         </Panel>
