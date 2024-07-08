@@ -1,15 +1,11 @@
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
 type TFractionLabelProps = {
-    label: string
-}
+  label: string;
+};
 
 export const FractionLabel = (props: TFractionLabelProps) => {
-    const {label} = props;
+  const { label } = props;
 
-    return (
-        <div className={styles.fraction_label}>
-            {label}
-        </div>
-    )
-}
+  return <div className={styles.fraction_label}>{label}</div>;
+};
