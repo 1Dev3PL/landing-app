@@ -13,15 +13,15 @@ type TCatalogProps = {
 
 export const Catalog = (props: TCatalogProps) => {
   const { title, btnTitle, items, onHeaderBtnClick } = props;
-  
-    return (
-        <div className={styles.catalog_container}>
-            <BlockHeader title={title} color={"ultramarine"}>
-                <Button color={"light_gray"} onClick={() => onHeaderBtnClick()}>
-                    {btnTitle}
-                </Button>
-            </BlockHeader>
-            <CatalogGrid items={items}/>
-        </div>
-    )
-}
+
+  return (
+    <div className={styles.catalog_container}>
+      <BlockHeader title={title} color={"ultramarine"}>
+        <Button color={"light_gray"} onClick={() => onHeaderBtnClick()}>
+          {btnTitle}
+        </Button>
+      </BlockHeader>
+      <CatalogGrid items={items} />
+    </div>
+  );
+};
