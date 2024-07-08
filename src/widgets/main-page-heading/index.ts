@@ -1,1 +1,1 @@
-export { MainPageHeading } from "./ui/MainPageHeading.tsx"
+export { MainPageHeading } from "./ui/MainPageHeading.tsx";
