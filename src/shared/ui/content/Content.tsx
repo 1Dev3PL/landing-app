@@ -1,19 +1,16 @@
-import {ReactNode} from 'react';
-import styles from './styles.module.scss'
+import { ReactNode } from "react";
+import styles from "./styles.module.scss";
 
 type TContentProps = {
-    children: ReactNode;
-}
+  children: ReactNode;
+};
 
 export const Content = (props: TContentProps) => {
-    const {children} = props;
+  const { children } = props;
 
-    return (
-        <div className={styles.container}>
-            <div className={styles.inner_container}>
-                {children}
-            </div>
-        </div>
-    );
-}
-
+  return (
+    <div className={styles.container}>
+      <div className={styles.inner_container}>{children}</div>
+    </div>
+  );
+};
