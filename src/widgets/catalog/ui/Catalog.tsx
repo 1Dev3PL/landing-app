@@ -17,7 +17,9 @@ export const Catalog = (props: TCatalogProps) => {
     return (
         <div className={styles.catalog_container}>
             <BlockHeader title={title} color={"ultramarine"}>
-                <Button title={btnTitle} color={"gray"} onClick={() => onHeaderBtnClick()}/>
+                <Button color={"light_gray"} onClick={() => onHeaderBtnClick()}>
+                    {btnTitle}
+                </Button>
             </BlockHeader>
             <CatalogGrid items={items}/>
         </div>
