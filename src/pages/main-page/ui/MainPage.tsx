@@ -6,6 +6,7 @@ import {Catalog} from "widgets/catalog";
 import {useNavigate} from "react-router-dom";
 import {items} from "shared/db/db.ts";
 import { MainPageHeading } from 'widgets/main-page-heading';
+import { About } from 'widgets/about/ui/About';
 
 export function MainPage() {
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ export function MainPage() {
             <Content>
                 <MainPageHeading />
                 <Catalog title={"Каталог продукции"} btnTitle={"Вся продукция"} items={items} onHeaderBtnClick={handleCatalogHeaderBtnClick}/>
+                <About />
             </Content>
             <Footer/>
         </div>
