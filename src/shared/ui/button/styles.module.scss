@@ -6,6 +6,12 @@
   font-size: 15px;
   border: none;
   border-radius: 50px;
+  cursor: pointer;
+  transition:
+          background-color 300ms,
+          color 300ms;
+
+
 
   &_small {
     height: 30px;
@@ -27,8 +33,18 @@
     background-color: $ultramarine;
   }
 
+  &_light_gray {
+    color: $text-base;
+    background-color: $light-gray;
+  }
+
   &_gray {
     color: $text-base;
-    background-color: $base-gray;
+    background-color: $gray;
+  }
+
+  &:hover {
+    background-color: $pale-cyan;
+    color: $ultramarine;
   }
 }

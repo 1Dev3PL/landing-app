@@ -2,28 +2,25 @@ import classNames from "classnames";
 import styles from "./styles.module.scss";
 
 type TButtonProps = {
-  title: string;
-  onClick?: () => void;
-  color: "ultramarine" | "gray";
-  className?: string;
-  size?: "small" | "base";
-};
+    onClick?: () => void;
+    color: "ultramarine" | "light_gray" | "gray";
+    className?: string;
+    size?: "small" | "base";
+    children: string;
+}
 
 export const Button = (props: TButtonProps) => {
-  const { color, title, onClick, className, size = "base" } = props;
+    const {color, onClick, className, size = "base", children} = props;
 
-  return (
-    <button
-      className={classNames(styles.button, className, {
-        [styles.button_ultramarine]: color === "ultramarine",
-        [styles.button_gray]: color === "gray",
-        [styles.button_small]: size === "small",
-        [styles.button_base]: size === "base",
-      })}
-      title={title}
-      onClick={onClick}
-    >
-      {title}
-    </button>
-  );
-};
+    return (
+        <button className={classNames(styles.button, className, {
+            [styles.button_ultramarine]: color === "ultramarine",
+            [styles.button_light_gray]: color === "light_gray",
+            [styles.button_gray]: color === "gray",
+            [styles.button_small]: size === "small",
+            [styles.button_base]: size === "base",
+        })} onClick={onClick}>
+            {children}
+        </button>
+    )
+}

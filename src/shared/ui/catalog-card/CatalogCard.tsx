@@ -20,24 +20,19 @@ export const CatalogCard = (props: TCardProps) => {
     navigate(`/products/group/${productGroupId}`);
   };
 
-  return (
-    <Panel className={styles.card_container}>
-      <div className={styles.image_container}>
-        <img className={styles.image} src={imgSrc} alt={"productImage"} />
-      </div>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.description}>{description}</div>
-      <div className={styles.fractions_container}>
-        {fractions.map((fr, idx) => (
-          <FractionLabel key={idx} label={fr} />
-        ))}
-        <Button
-          title={"Все виды"}
-          color={"ultramarine"}
-          size={"small"}
-          onClick={() => handleButtonClick()}
-        />
-      </div>
-    </Panel>
-  );
-};
+    return (
+        <Panel className={styles.card_container}>
+            <div className={styles.image_container}>
+                <img className={styles.image} src={imgSrc} alt={"productImage"}/>
+            </div>
+            <div className={styles.title}>{title}</div>
+            <div className={styles.description}>{description}</div>
+            <div className={styles.fractions_container}>
+                {fractions.map((fr, idx) => <FractionLabel key={idx} label={fr}/>)}
+                <Button color={"ultramarine"} size={"small"} onClick={() => handleButtonClick()}>
+                    Все виды
+                </Button>
+            </div>
+        </Panel>
+    )
+}
