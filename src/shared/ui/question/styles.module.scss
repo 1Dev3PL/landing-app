@@ -1,0 +1,26 @@
+@use "shared/themes/_variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  background-color: $pale-cyan;
+  color: $ultramarine;
+  border-radius: 5px;
+  border: 1px solid $ultramarine;
+  padding: 32px 0 32px 30px;
+  .question {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23.8px;
+    letter-spacing: -3%;
+  }
+
+  .answer {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -3%;
+  }
+}
