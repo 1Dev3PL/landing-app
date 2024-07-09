@@ -3,7 +3,9 @@ import { BlockHeader } from "shared/ui/block-header/BlockHeader.tsx";
 import { Button } from "shared/ui/button/Button.tsx";
 import { Panel } from "shared/ui/panel/Panel.tsx";
 import { TReview } from "shared/db/db.ts";
-import { useState } from "react";
+import { useRef } from "react";
+import arrowLeft from "shared/assets/icons/arrow-left.svg";
+import arrowRight from "shared/assets/icons/arrow-right.svg";
 
 type TReviewsProps = {
   items: TReview[];
@@ -12,35 +14,38 @@ type TReviewsProps = {
 export const Reviews = (props: TReviewsProps) => {
   const { items } = props;
 
-  const [showedIndexes, setShowedIndexes] = useState<[number, number]>([0, 3]);
-  const [viewedItems, setViewedItems] = useState<TReview[]>(items.slice(0, 4));
+  const carouselRef = useRef(null);
 
-  const handleGoLeft = () => {
-    if (showedIndexes[0] > 0) {
-      setShowedIndexes([showedIndexes[0] - 1, showedIndexes[1] - 1]);
-    }
+  const handleScrollLeftClick = () => {
+    carouselRef.current.scrollLeft -= 400;
   };
 
-  const handleGoRight = () => {
-    if (showedIndexes[1] < items.length - 1) {
-      setShowedIndexes([showedIndexes[0] + 1, showedIndexes[1] + 1]);
-    }
+  const handleScrollRightClick = () => {
+    carouselRef.current.scrollLeft += 400;
   };
 
   return (
     <div className={styles.container}>
       <BlockHeader title={"Отзывы и благодарности"} color={"ultramarine"}>
         <div className={styles.buttons_container}>
-          <Button color={"light_gray"} onClick={() => handleGoLeft()}>
-            left
+          <Button
+            color={"light_gray"}
+            onClick={() => handleScrollLeftClick()}
+            className={styles.button}
+          >
+            <img src={arrowLeft} className={styles.button_icon} />
           </Button>
-          <Button color={"light_gray"} onClick={() => handleGoRight()}>
-            right
+          <Button
+            color={"light_gray"}
+            onClick={() => handleScrollRightClick()}
+            className={styles.button}
+          >
+            <img src={arrowRight} className={styles.button_icon} />
           </Button>
         </div>
       </BlockHeader>
-      <div className={styles.reviews_slider}>
-        {items.slice(showedIndexes[0], showedIndexes[1] + 1).map((item) => {
+      <div className={styles.reviews_slider} ref={carouselRef}>
+        {items.map((item) => {
           return (
             <Panel key={item.id} className={styles.review_item}>
               <div className={styles.review_item_upper_container}>

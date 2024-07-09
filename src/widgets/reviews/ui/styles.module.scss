@@ -5,15 +5,28 @@
 
   .buttons_container {
     display: flex;
+    align-items: center;
     gap: 5px;
+
+    .button {
+      padding: 15px 20px 15px 20px;
+
+      .button_icon {
+        pointer-events: none;
+        height: 100%;
+      }
+    }
   }
 
   .reviews_slider {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    grid-column-gap: 10px;
 
     .review_item {
+      flex: 1 0 25%;
+      box-sizing: border-box;
       padding: 25px;
       display: flex;
       flex-direction: column;
