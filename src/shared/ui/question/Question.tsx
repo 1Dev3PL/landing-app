@@ -2,45 +2,37 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 import classNames from "classnames";
 import arrowClosed from "shared/assets/icons/arrowClosed.svg";
-import arrowOpened from "shared/assets/icons/arrowOpened.svg";
 
 type TQuestionProps = {
   question: string;
   answer: string;
+  className?: string;
 };
 
 export const Question = (props: TQuestionProps) => {
-  const { question, answer } = props;
+  const { question, answer, className } = props;
   const [isActive, setIsActive] = useState(false);
 
   const handleIsActiveChange = () => {
     setIsActive(!isActive);
   };
 
-  if (!isActive) {
-    return (
-      <div className={styles.container}>
-        <div
-          className={classNames(styles.question, styles.no_answer)}
-          onClick={handleIsActiveChange}
-        >
-          {question}
-          <img src={arrowClosed} alt="arrowClosed" />
-        </div>
+  return (
+    <div
+      className={classNames(
+        `${styles.container} ${styles.no_answer}`,
+        className,
+      )}
+    >
+      <div className={styles.question} onClick={handleIsActiveChange}>
+        {question}
+        <img
+          src={arrowClosed}
+          alt="arrowClosed"
+          className={isActive ? `${styles.arrow} ${styles.arrow_rotated}` : styles.arrow}
+        />
       </div>
-    );
-  } else {
-    return (
-      <div className={styles.container}>
-        <div
-          className={classNames(styles.question, styles.with_answer)}
-          onClick={handleIsActiveChange}
-        >
-          {question}
-          <img src={arrowOpened} alt="arrowOpened" />
-        </div>
-        <div className={styles.answer}>{answer}</div>
-      </div>
-    );
-  }
+      {isActive && <div className={styles.answer}>{answer}</div>}
+    </div>
+  );
 };

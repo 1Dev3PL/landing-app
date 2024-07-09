@@ -8,7 +8,7 @@
   color: $ultramarine;
   border-radius: 5px;
   border: 1px solid $ultramarine;
-  padding: 32px 0 0 30px;
+
   .question {
     display: flex;
     justify-content: space-between;
@@ -17,14 +17,14 @@
     font-size: 17px;
     line-height: 23.8px;
     letter-spacing: -3%;
-  }
 
-  .no_answer {
-    padding: 0 30px 32px 0;
-  }
+    .arrow {
+      transition: 0.25s;
+    }
 
-  .with_answer {
-    padding-right: 32.5px;
+    .arrow_rotated {
+      transform: rotate(90deg);
+    }
   }
 
   .answer {
@@ -32,6 +32,13 @@
     font-size: 15px;
     line-height: 21px;
     letter-spacing: -3%;
-    padding-bottom: 50px;
   }
+}
+
+.no_answer {
+  padding: 32px 30px 32px 30px;
+}
+
+.with_answer {
+  padding: 32px 32.5px 50px 30px;
 }

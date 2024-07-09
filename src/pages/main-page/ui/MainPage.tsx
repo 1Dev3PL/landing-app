@@ -8,7 +8,7 @@ import { items } from "shared/db/db.ts";
 import { MainPageHeading } from "widgets/main-page-heading";
 import { About } from 'widgets/about';
 import { Partners } from "widgets/partners";
-import { Question } from "shared/ui/question/Question.tsx";
+import { FAQ } from "widgets/faq";
 
 export function MainPage() {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ export function MainPage() {
         />
         <About />
         <Partners />
-        <Question question={"Что-то"} answer={"Ответ ответ ответ ответ ответ ответ ответ"} />
+        <FAQ />
       </Content>
       <Footer />
     </div>
