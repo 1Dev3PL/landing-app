@@ -75,3 +75,19 @@ export const items: TItem[] = [
     productGroupId: 2,
   },
 ];
+
+export type TPlacemark= {
+  id: number;
+  latitude: number;
+  longitude: number;
+  description: string;
+}
+
+export const factories = [
+  {
+    id: 1,
+    latitude: 60.584634,
+    longitude: 29.061951,
+    description: "Гавриловский Щз, до 17:00",
+  },
+];
