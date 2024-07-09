@@ -13,7 +13,7 @@
       "app/*": ["app/*"],
       "pages/*": ["pages/*"],
       "widgets/*": ["widgets/*"],
-      "shared/*": ["shared/*"],
+      "shared/*": ["shared/*"]
     },
 
     /* Bundler mode */

@@ -11,7 +11,7 @@
   }
 
   &_gray {
-    background-color: $base-gray;
+    background-color: $light-gray;
   }
 
   .title {
@@ -21,12 +21,11 @@
     letter-spacing: -0.02em;
 
     &_ultramarine {
-      color: $text-white;
+      color: $base-white;
     }
 
     &_gray {
       color: $text-base;
     }
-
   }
 }

@@ -1,29 +1,33 @@
 @use "shared/themes/_variables.scss" as *;
 
-.main_container {
-    width: 100%;
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 36.26px;
+
+  .header {
+    width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .navigation {
-        display: flex;
-        gap: 35px;
+    .nav_container {
+      display: flex;
+      gap: 2.1875rem;
 
-        .nav_link {
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 400;
-            color: $text-base;
-        }
+      .nav_link {
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: $text-base;
+      }
     }
 
-    .phone_number_container {
-        .phone_number {
-            font-weight: 600;
-            font-size: 20px;
-            color: $ultramarine;
-        }
+    .phone_number {
+      font-weight: 600;
+      font-size: 20px;
+      color: $ultramarine;
     }
+  }
 }
-

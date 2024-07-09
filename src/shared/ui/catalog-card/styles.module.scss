@@ -1,0 +1,37 @@
+@use "shared/themes/_variables" as *;
+
+.card_container {
+  background-color: $base-white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  min-width: 359px;
+  box-sizing: border-box;
+
+  .image_container {
+    .image {
+      width: 100%;
+    }
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36.31px;
+    letter-spacing: -0.02em;
+  }
+
+  .description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: -0.03em;
+  }
+
+  .fractions_container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
