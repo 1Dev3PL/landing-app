@@ -8,8 +8,10 @@
   color: $ultramarine;
   border-radius: 5px;
   border: 1px solid $ultramarine;
-  padding: 32px 0 32px 30px;
+  padding: 32px 0 0 30px;
   .question {
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     font-weight: 500;
     font-size: 17px;
@@ -17,10 +19,19 @@
     letter-spacing: -3%;
   }
 
+  .no_answer {
+    padding: 0 30px 32px 0;
+  }
+
+  .with_answer {
+    padding-right: 32.5px;
+  }
+
   .answer {
     font-weight: 400;
     font-size: 15px;
     line-height: 21px;
     letter-spacing: -3%;
+    padding-bottom: 50px;
   }
 }
