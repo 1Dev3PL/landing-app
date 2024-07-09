@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import {items, reviews} from "shared/db/db.ts";
 import { MainPageHeading } from "widgets/main-page-heading";
 import {Reviews} from "widgets/reviews";
+import { About } from 'widgets/about';
+import { Partners } from "widgets/partners";
 
 export function MainPage() {
   const navigate = useNavigate();
@@ -26,7 +28,9 @@ export function MainPage() {
           items={items}
           onHeaderBtnClick={handleCatalogHeaderBtnClick}
         />
+        <About />
         <Reviews items={reviews}/>
+        <Partners />
       </Content>
       <Footer />
     </div>
