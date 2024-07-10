@@ -1,0 +1,22 @@
+@use "shared/themes/_variables" as *;
+
+.textarea {
+  border: none;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.2px;
+  letter-spacing: -0.02em;
+  border-radius: 7px;
+  resize: none;
+  width: 100%;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid $ultramarine;
+  }
+
+  &::placeholder {
+    color: #ADADAD;
+  }
+}
