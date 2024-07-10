@@ -1,12 +1,18 @@
 import styles from "./styles.module.scss";
-import { TPlacemark } from "shared/db/db.ts";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+
+type TPlacemark = {
+  id: number;
+  latitude: number;
+  longitude: number;
+  description: string;
+}
 
 type TMapProps = {
   placemarks: TPlacemark[];
   centerCoords: number[];
   zoom: number;
-  handleOnPlacemarkClick: (e: never) => void;
+  handleOnPlacemarkClick: (id: number) => void;
 };
 
 export const MapComponent = (props: TMapProps) => {

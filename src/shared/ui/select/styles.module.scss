@@ -1,0 +1,20 @@
+@use "shared/themes/_variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .header {
+    display: flex;
+    border: 1px solid $ultramarine;
+    padding: 16.5px 0 16.5px 15px;
+    background-color: $base-white;
+    color: $text-base;
+    font-size: $font-size-main;
+    font-weight: $font-weight-main;
+    line-height: 16.94px;
+    letter-spacing: -3%;
+  }
+}
