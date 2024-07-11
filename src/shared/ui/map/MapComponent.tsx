@@ -12,7 +12,7 @@ type TMapProps = {
   placemarks: TPlacemark[];
   centerCoords: number[];
   zoom: number;
-  handlePlacemarkClick: (id: number) => void;
+  handlePlacemarkClick?: (id: number) => void;
 };
 
 export const MapComponent = (props: TMapProps) => {
@@ -36,7 +36,7 @@ export const MapComponent = (props: TMapProps) => {
               key={placemark.id}
               geometry={[placemark.latitude, placemark.longitude]}
               modules={["geoObject.addon.balloon"]}
-              onClick={() => handlePlacemarkClick(placemark.id)}
+              onClick={() => handlePlacemarkClick && handlePlacemarkClick(placemark.id)}
               properties={{
                 balloonContentBody: `${placemark.description}`,
               }}
