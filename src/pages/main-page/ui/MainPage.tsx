@@ -6,9 +6,10 @@ import { Catalog } from "widgets/catalog";
 import { useNavigate } from "react-router-dom";
 import { factories, items, reviews } from "shared/db/db.ts";
 import { MainPageHeading } from "widgets/main-page-heading";
-import {Reviews} from "widgets/reviews";
-import { About } from 'widgets/about';
+import { Reviews } from "widgets/reviews";
+import { About } from "widgets/about";
 import { Partners } from "widgets/partners";
+import { Feedback } from "widgets/feedback";
 import { Factories } from "widgets/factories";
 
 export function MainPage() {
@@ -31,8 +32,9 @@ export function MainPage() {
         />
         <Factories factories={factories}/>
         <About />
-        <Reviews items={reviews}/>
+        <Reviews items={reviews} />
         <Partners />
+        <Feedback />
       </Content>
       <Footer />
     </div>

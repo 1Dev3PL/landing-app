@@ -2,18 +2,29 @@ import classNames from "classnames";
 import styles from "./styles.module.scss";
 
 type TButtonProps = {
+  iconSrc?: string;
+  type?: "button" | "submit";
   onClick?: () => void;
   color: "ultramarine" | "light_gray" | "gray";
   className?: string;
   size?: "small" | "base";
-  children: string | HTMLImageElement;
+  children?: string;
 };
 
 export const Button = (props: TButtonProps) => {
-  const { color, onClick, className, size = "base", children } = props;
+  const {
+    iconSrc,
+    color,
+    onClick,
+    className,
+    size = "base",
+    children,
+    type = "button",
+  } = props;
 
   return (
     <button
+      type={type}
       className={classNames(styles.button, className, {
         [styles.button_ultramarine]: color === "ultramarine",
         [styles.button_light_gray]: color === "light_gray",
@@ -23,6 +34,7 @@ export const Button = (props: TButtonProps) => {
       })}
       onClick={onClick}
     >
+      {iconSrc && <img src={iconSrc} alt={""} />}
       {children}
     </button>
   );
