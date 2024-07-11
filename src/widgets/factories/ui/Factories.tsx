@@ -41,7 +41,7 @@ export const Factories = (props: TFactoriesProps) => {
       <MapComponent
         placemarks={factoriesForMapComponent}
         centerCoords={[factories[option].latitude, factories[option].longitude]}
-        zoom={18}
+        zoom={12}
         handleOnPlacemarkClick={handleOnPlacemarkClick}
       />
       <ChooseFactory

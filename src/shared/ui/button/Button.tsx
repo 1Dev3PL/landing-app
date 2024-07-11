@@ -6,7 +6,7 @@ type TButtonProps = {
   color: "ultramarine" | "light_gray" | "gray";
   className?: string;
   size?: "small" | "base";
-  children: string;
+  children: string | HTMLImageElement;
 };
 
 export const Button = (props: TButtonProps) => {

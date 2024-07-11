@@ -23,8 +23,9 @@ export const CatalogGrid = (props: TCatalogContainerProps) => {
   return (
     <Panel className={styles.catalog_grid_container}>
       <div className={styles.grid}>
-        {viewedItems.map((item) => (
+        {viewedItems.map((item, idx) => (
           <CatalogCard
+            key={idx}
             imgSrc={item.imgSrc}
             title={item.title}
             description={item.description}
