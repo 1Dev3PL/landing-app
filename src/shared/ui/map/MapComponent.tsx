@@ -6,7 +6,7 @@ type TPlacemark = {
   latitude: number;
   longitude: number;
   description: string;
-}
+};
 
 type TMapProps = {
   placemarks: TPlacemark[];
@@ -16,7 +16,7 @@ type TMapProps = {
 };
 
 export const MapComponent = (props: TMapProps) => {
-  const { placemarks, centerCoords, zoom , handleOnPlacemarkClick} = props;
+  const { placemarks, centerCoords, zoom, handleOnPlacemarkClick } = props;
   return (
     <div className={styles.container}>
       <YMaps>
