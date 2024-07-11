@@ -29,7 +29,7 @@ export const Question = (props: TQuestionProps) => {
         <img
           src={arrowClosed}
           alt="arrowClosed"
-          className={isActive ? `${styles.arrow} ${styles.arrow_rotated}` : styles.arrow}
+          className={classNames(styles.arrow, {[styles.arrow_rotated]: isActive})}
         />
       </div>
       {isActive && <div className={styles.answer}>{answer}</div>}

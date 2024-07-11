@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .buttons_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .button {
+      padding: 15px 20px 15px 20px;
+
+      .button_icon {
+        pointer-events: none;
+        height: 100%;
+      }
+    }
+  }
+
+  .reviews_slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    grid-column-gap: 10px;
+
+    .review_item {
+      flex: 1 0 25%;
+      box-sizing: border-box;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 35px;
+
+      .review_item_upper_container {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        .review_text {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19.6px;
+          letter-spacing: -0.03em;
+        }
+
+        .review_logo {
+          height: 37px;
+        }
+      }
+
+      .review_companyName {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18.2px;
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+}
