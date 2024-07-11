@@ -1,5 +1,88 @@
+@use "shared/themes/_variables" as *;
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 10px ;
+  gap: 10px;
+
+  .container_ui {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+
+    .container_upper {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      .title {
+        padding: 38px 0 0 32px;
+        color: $ultramarine;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 36.31px;
+        letter-spacing: -2%;
+      }
+
+      .address {
+        display: flex;
+        gap: 10px;
+        padding-left: 30px;
+
+        .text_with_button {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          height: 50px;
+
+          .text {
+            border: 1px solid $ultramarine;
+            border-radius: 3px;
+            padding: 16.5px 35px 16.5px 35px;
+            background-color: $base-white;
+            color: $text-base;
+            font-size: $font-size-main;
+            font-weight: $font-weight-main;
+            line-height: 16.94px;
+            letter-spacing: -3%;
+          }
+        }
+      }
+    }
+
+    .container_lower {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      padding-bottom: 44px;
+
+      .subtitle {
+        padding-left: 33px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24.2px;
+        letter-spacing: -2%;
+        color: $text-base;
+      }
+
+      .goods {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        padding-left: 30px;
+
+        .good {
+          border: 1px solid $ultramarine;
+          border-radius: 3px;
+          padding: 6px 22px 6px 22px;
+          background-color: $base-white;
+          color: $text-base;
+          font-size: $font-size-main;
+          font-weight: $font-weight-main;
+          line-height: 16.94px;
+          letter-spacing: -3%;
+        }
+      }
+    }
+  }
 }

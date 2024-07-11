@@ -12,11 +12,11 @@ type TMapProps = {
   placemarks: TPlacemark[];
   centerCoords: number[];
   zoom: number;
-  handleOnPlacemarkClick: (id: number) => void;
+  handlePlacemarkClick: (id: number) => void;
 };
 
 export const MapComponent = (props: TMapProps) => {
-  const { placemarks, centerCoords, zoom, handleOnPlacemarkClick } = props;
+  const { placemarks, centerCoords, zoom, handlePlacemarkClick } = props;
   return (
     <div className={styles.container}>
       <YMaps>
@@ -36,7 +36,7 @@ export const MapComponent = (props: TMapProps) => {
               key={placemark.id}
               geometry={[placemark.latitude, placemark.longitude]}
               modules={["geoObject.addon.balloon"]}
-              onClick={() => handleOnPlacemarkClick(placemark.id)}
+              onClick={() => handlePlacemarkClick(placemark.id)}
               properties={{
                 balloonContentBody: `${placemark.description}`,
               }}

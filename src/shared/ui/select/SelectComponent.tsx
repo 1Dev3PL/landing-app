@@ -1,10 +1,11 @@
 import styles from "./styles.module.scss"
 import { useState } from 'react'
 import arrowIcon from "shared/assets/icons/factoryArrow.svg";
+import classNames from "classnames";
 
 type TSelectFactory = {
   id: number;
-  title: string | undefined;
+  title?: string;
 }
 
 type TSelectProps = {
@@ -15,29 +16,25 @@ type TSelectProps = {
 export const SelectComponent = (props: TSelectProps) => {
   const {handleOptionChange, factories, option} = props;
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(factories[option]);
 
   const toggling = () => {
     setIsOpen(!isOpen);
   }
 
-  const onOptionClicked = (value: TSelectFactory) => {
-    setSelectedOption(value);
-    handleOptionChange(value.id);
+  const onOptionClicked = (value: number) => {
+    handleOptionChange(value);
     setIsOpen(false);
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.header} onClick={toggling}>
-        {option != selectedOption.id ? factories[option].title : selectedOption.title}
+        {factories[option].title}
         <div className={styles.container_icon}>
           <img
             src={arrowIcon}
             alt="arrowIcon"
-            className={
-              isOpen ? `${styles.arrow} ${styles.arrow_open}` : styles.arrow
-            }
+            className={classNames(styles.arrow, {[styles.arrow_open]: isOpen})}
           />
         </div>
       </div>
@@ -47,7 +44,7 @@ export const SelectComponent = (props: TSelectProps) => {
             {factories.map((factory) => (
               <li
                 key={factory.id}
-                onClick={() => onOptionClicked(factory)}
+                onClick={() => onOptionClicked(factory.id)}
                 className={styles.list_item}
               >
                 {factory.title}
