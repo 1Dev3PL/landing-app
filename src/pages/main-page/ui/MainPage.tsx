@@ -9,6 +9,7 @@ import { MainPageHeading } from "widgets/main-page-heading";
 import { Reviews } from "widgets/reviews";
 import { About } from "widgets/about";
 import { Partners } from "widgets/partners";
+import { FAQ } from "widgets/faq";
 import { Feedback } from "widgets/feedback";
 import { Factories } from "widgets/factories";
 
@@ -34,6 +35,7 @@ export function MainPage() {
         <About />
         <Reviews items={reviews} />
         <Partners />
+        <FAQ />
         <Feedback />
       </Content>
       <Footer />
