@@ -1,0 +1,71 @@
+@use "shared/themes/_variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: $ultramarine;
+  border-radius: 3px;
+
+  .header {
+    display: flex;
+    gap: 12px;
+    border: 1px solid $ultramarine;
+    border-radius: 3px;
+    padding: 16.5px 0 16.5px 15px;
+    width: 272px;
+    background-color: $base-white;
+    color: $text-base;
+    font-size: $font-size-main;
+    font-weight: $font-weight-main;
+    line-height: 16.94px;
+    letter-spacing: -3%;
+    cursor: pointer;
+
+    .container_icon {
+      .arrow {
+        transition: 0.3s;
+      }
+
+      .arrow_open {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .container_dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .dropdown_list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .list_item {
+        display: flex;
+        gap: 12px;
+        border: 1px solid $ultramarine;
+        border-radius: 3px;
+        padding: 16.5px 0 16.5px 15px;
+        width: 272px;
+        background-color: $base-white;
+        color: $text-base;
+        font-size: $font-size-main;
+        font-weight: $font-weight-main;
+        line-height: 16.94px;
+        letter-spacing: -3%;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .list_item:hover {
+        background-color: $ultramarine;
+        color: $base-white;
+      }
+    }
+  }
+}

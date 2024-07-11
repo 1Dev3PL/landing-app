@@ -80,6 +80,47 @@ export const items: TItem[] = [
   },
 ];
 
+export type TPlacemark= {
+  id: number;
+  latitude: number;
+  longitude: number;
+  description: string;
+  title?: string;
+  address?: string;
+  goods?: string[];
+}
+
+export const factories: TPlacemark[] = [
+  {
+    id: 0,
+    latitude: 60.584634,
+    longitude: 29.061951,
+    description: "Гавриловский Щз, до 17:00",
+    title: "Гавриловский щебеночный завод",
+    address: "186350, Ленинградская область, Выборгский район, пос. Гаврилово, ул. Заводская, д.1",
+    goods: [
+      "Щебень фр. 5-20 мм",
+      "Щебень фр. 20-40 мм",
+      "Щебень фр. 40-70 мм",
+      "Щебень фр. 25-60 мм",
+      "ЩПС фр. 0-40 мм",
+      "ЩПС фр. 0-80 мм",
+      "Песок из отсевов дробления фр. 0-5 мм",
+    ],
+  },
+  {
+    id: 1,
+    latitude: 60.373541,
+    longitude: 29.423439,
+    description: "Рощинское городское поселение",
+    title: "Рощинское городское поселение",
+    address: "Рощинское городское поселение, Выборгский район, Ленинградская область",
+    goods: [
+      "Something",
+    ],
+  },
+];
+
 export type TReview = {
   id: number;
   logo: string;
