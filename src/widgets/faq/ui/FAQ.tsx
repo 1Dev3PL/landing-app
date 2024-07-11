@@ -16,7 +16,6 @@ export const FAQ = () => {
                   key={index}
                   question={question.question}
                   answer={question.answer}
-                  className={styles.question}
                 />
               ),
           )}
@@ -29,7 +28,6 @@ export const FAQ = () => {
                   key={index}
                   question={question.question}
                   answer={question.answer}
-                  className={styles.question}
                 />
               ),
           )}
