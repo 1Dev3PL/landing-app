@@ -18,11 +18,14 @@ export const Question = (props: TQuestionProps) => {
   };
 
   return (
-    <div
-      className={classNames([styles.container], className)}
-    >
+    <div className={classNames([styles.container], className)}>
       <div className={styles.container_inner} onClick={handleIsActiveChange}>
-        <div className={classNames([styles.question], {[styles.no_answer]: !isActive, [styles.with_answer]: isActive})}>
+        <div
+          className={classNames([styles.question], {
+            [styles.no_answer]: !isActive,
+            [styles.with_answer]: isActive,
+          })}
+        >
           {question}
           <img
             src={arrowClosed}

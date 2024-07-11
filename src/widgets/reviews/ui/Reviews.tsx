@@ -14,14 +14,18 @@ type TReviewsProps = {
 export const Reviews = (props: TReviewsProps) => {
   const { items } = props;
 
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const handleScrollLeftClick = () => {
-    carouselRef.current.scrollLeft -= 400;
+    if (carouselRef.current) {
+      carouselRef.current.scrollLeft -= 400;
+    }
   };
 
   const handleScrollRightClick = () => {
-    carouselRef.current.scrollLeft += 400;
+    if (carouselRef.current) {
+      carouselRef.current.scrollLeft += 400;
+    }
   };
 
   return (
@@ -29,19 +33,17 @@ export const Reviews = (props: TReviewsProps) => {
       <BlockHeader title={"Отзывы и благодарности"} color={"ultramarine"}>
         <div className={styles.buttons_container}>
           <Button
+            iconSrc={arrowLeft}
             color={"light_gray"}
             onClick={() => handleScrollLeftClick()}
             className={styles.button}
-          >
-            <img src={arrowLeft} className={styles.button_icon} />
-          </Button>
+          />
           <Button
+            iconSrc={arrowRight}
             color={"light_gray"}
             onClick={() => handleScrollRightClick()}
             className={styles.button}
-          >
-            <img src={arrowRight} className={styles.button_icon} />
-          </Button>
+          />
         </div>
       </BlockHeader>
       <div className={styles.reviews_slider} ref={carouselRef}>

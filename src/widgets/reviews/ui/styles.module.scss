@@ -11,7 +11,7 @@
     .button {
       padding: 15px 20px 15px 20px;
 
-      .button_icon {
+      & img {
         pointer-events: none;
         height: 100%;
       }
