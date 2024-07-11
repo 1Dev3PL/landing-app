@@ -9,25 +9,30 @@
   border-radius: 5px;
   border: 1px solid $ultramarine;
 
-  .question {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 23.8px;
-    letter-spacing: -3%;
+  .container_inner {
+    height: 100%;
 
-    .arrow {
-      transition: 0.3s;
-    }
+    .question {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 23.8px;
+      letter-spacing: -3%;
 
-    .arrow_rotated {
-      transform: rotate(90deg);
+      .arrow {
+        transition: 0.3s;
+      }
+
+      .arrow_rotated {
+        transform: rotate(90deg);
+      }
     }
   }
 
   .answer {
+    padding: 0 94px 50px 30px;
     font-weight: 400;
     font-size: 15px;
     line-height: 21px;
@@ -40,5 +45,5 @@
 }
 
 .with_answer {
-  padding: 32px 32.5px 50px 30px;
+  padding: 32px 32.5px 0 30px;
 }
