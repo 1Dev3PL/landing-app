@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 
 type TTextareaProps = {
+  name?: string;
   placeholder?: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
@@ -10,10 +11,11 @@ type TTextareaProps = {
 };
 
 export const Textarea = (props: TTextareaProps) => {
-  const { placeholder, value, onChange, className } = props;
+  const { placeholder, value, onChange, className, name } = props;
 
   return (
     <textarea
+      name={name}
       className={classNames(styles.textarea, className)}
       placeholder={placeholder}
       value={value}

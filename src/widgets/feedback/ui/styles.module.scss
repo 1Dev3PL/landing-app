@@ -1,0 +1,65 @@
+@use "shared/themes/_variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .form_container {
+    padding: 32px;
+
+    .form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 86px;
+
+      &_column {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &_title {
+          font-size: 25px;
+          font-weight: 600;
+          line-height: 30.26px;
+          letter-spacing: -0.02em;
+          color: $ultramarine;
+        }
+
+        &_block {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          &_title {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 26.63px;
+            letter-spacing: -0.02em;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &_comment_block {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-grow: 1;
+      }
+
+      &_address_textarea {
+        height: 90px;
+      }
+
+      &_comment_textarea {
+        height: 100%;
+      }
+
+      .personal_data_link {
+        color: $ultramarine;
+
+      }
+    }
+  }
+}
