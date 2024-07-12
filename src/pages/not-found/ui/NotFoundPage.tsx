@@ -5,8 +5,11 @@ import styles from "./styles.module.scss";
 import { Button } from "shared/ui/button/Button.tsx";
 import { Content } from "shared/ui/content/Content.tsx";
 import video1 from "shared/assets/images/video1.png"
+import { useNavigate } from "react-router-dom";
 
 export const NotFoundPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Header />
@@ -18,8 +21,8 @@ export const NotFoundPage = () => {
               {"Кажется такой\nстраницы больше нет"}
             </div>
             <div className={styles.buttons_container}>
-              <Button color={"ultramarine"}>Каталог продукции</Button>
-              <Button color={"gray"}>На главную</Button>
+              <Button color={"ultramarine"} onClick={() => navigate("/production")}>Каталог продукции</Button>
+              <Button color={"gray"} onClick={() => navigate("/")}>На главную</Button>
             </div>
           </Panel>
           <div>
