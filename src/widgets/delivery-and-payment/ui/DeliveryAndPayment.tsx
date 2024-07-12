@@ -11,7 +11,7 @@ export const DeliveryAndPayment = () => {
       <div className={styles.container_inner}>
         <div className={styles.container_upper}>
           <Panel className={styles.container_left}>
-            <img src={image} alt="deliveryTruck" className={styles.video} />
+            <img src={image} alt="deliveryTruck" className={styles.image} />
           </Panel>
           <Panel className={styles.container_right}>
             <div className={styles.header}>
