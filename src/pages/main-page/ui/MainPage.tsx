@@ -33,7 +33,7 @@ export function MainPage() {
           items={items}
           onHeaderBtnClick={handleCatalogHeaderBtnClick}
         />
-        <Factories factories={factories}/>
+        <Factories factories={factories} />
         <About />
         <QuarryVideo />
         <Reviews items={reviews} />

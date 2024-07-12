@@ -8,10 +8,10 @@ export const Header = () => {
       <div className={styles.header}>
         <img src={logo} alt="logo" className={styles.logo} />
         <div className={styles.nav_container}>
-          <Link to="" className={styles.nav_link}>
+          <Link to="/" className={styles.nav_link}>
             Продукция
           </Link>
-          <Link to="" className={styles.nav_link}>
+          <Link to="/production" className={styles.nav_link}>
             О компании
           </Link>
           <Link to="" className={styles.nav_link}>

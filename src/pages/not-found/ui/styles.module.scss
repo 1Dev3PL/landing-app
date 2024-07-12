@@ -1,0 +1,37 @@
+.block_container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 50px;
+    box-sizing: border-box;
+
+    .status_code {
+      font-size: 130px;
+      font-weight: 600;
+      line-height: 136.5px;
+      letter-spacing: -0.02em;
+    }
+
+    .description {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.02em;
+      white-space: pre-wrap;
+    }
+
+    .buttons_container {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .video {
+    height: 100%;
+  }
+}
