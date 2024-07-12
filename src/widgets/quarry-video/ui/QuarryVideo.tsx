@@ -1,9 +1,9 @@
-import styles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 import { BlockHeader } from "shared/ui/block-header/BlockHeader.tsx";
 import quarryVideo from "shared/assets/images/quarryVideo.png";
 
 export const QuarryVideo = () => {
-  return(
+  return (
     <div className={styles.container}>
       <BlockHeader title="Видео с карьера Гаврилово" color="gray" />
       <div className={styles.container_video}>
@@ -11,4 +11,4 @@ export const QuarryVideo = () => {
       </div>
     </div>
   );
-}
+};
