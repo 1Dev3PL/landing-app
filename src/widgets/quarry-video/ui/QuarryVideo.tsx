@@ -7,7 +7,7 @@ export const QuarryVideo = () => {
     <div className={styles.container}>
       <BlockHeader title="Видео с карьера Гаврилово" color="gray" />
       <div className={styles.container_video}>
-        <img src={quarryVideo} alt="uarryVideo" className={styles.video} />
+        <img src={quarryVideo} alt="quarryVideo" className={styles.video} />
       </div>
     </div>
   );
