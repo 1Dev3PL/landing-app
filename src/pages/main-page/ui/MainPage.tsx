@@ -13,6 +13,7 @@ import { FAQ } from "widgets/faq";
 import { Feedback } from "widgets/feedback";
 import { Factories } from "widgets/factories";
 import { Contacts } from "widgets/contacts/ui/Contacts.tsx";
+import { QuarryVideo } from "widgets/quarry-video";
 
 export function MainPage() {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ export function MainPage() {
         />
         <Factories factories={factories}/>
         <About />
+        <QuarryVideo />
         <Reviews items={reviews} />
         <Partners />
         <FAQ />
