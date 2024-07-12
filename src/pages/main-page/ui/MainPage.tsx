@@ -31,7 +31,7 @@ export function MainPage() {
           items={items}
           onHeaderBtnClick={handleCatalogHeaderBtnClick}
         />
-        <Factories factories={factories}/>
+        <Factories factories={factories} />
         <About />
         <Reviews items={reviews} />
         <Partners />
