@@ -138,7 +138,7 @@ export type TPlacemark = {
   goods?: string[];
 };
 
-export const office: TPlacemark[] = [
+export const office: [TPlacemark] = [
   {
     id: 0,
     latitude: 59.87887,
