@@ -74,7 +74,11 @@ export const Contacts = (props: TContactProps) => {
           </div>
         </div>
       </Panel>
-      <MapComponent placemarks={office} centerCoords={[office[0].latitude, office[0].longitude]} zoom={12} />
+      <MapComponent
+        placemarks={office}
+        centerCoords={[office[0].latitude, office[0].longitude]}
+        zoom={12}
+      />
     </div>
   );
 };
