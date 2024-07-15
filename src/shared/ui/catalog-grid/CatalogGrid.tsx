@@ -12,11 +12,11 @@ type TCatalogContainerProps = {
 export const CatalogGrid = (props: TCatalogContainerProps) => {
   const { items } = props;
 
-  const [viewedItems, setviewedItems] = useState<TItem[]>(items.slice(0, 3));
+  const [viewedItems, setViewedItems] = useState<TItem[]>(items.slice(0, 3));
   const [isShowedMore, setIsShowedMore] = useState(false);
 
   const handleShowMore = () => {
-    setviewedItems(items);
+    setViewedItems(items);
     setIsShowedMore(true);
   };
 
@@ -36,7 +36,7 @@ export const CatalogGrid = (props: TCatalogContainerProps) => {
       </div>
       {!isShowedMore && (
         <div className={styles.button_container}>
-          <Button color={"ultramarine"} onClick={() => handleShowMore()}>
+          <Button color={"ultramarine"} onClick={handleShowMore}>
             Показать ещё
           </Button>
         </div>

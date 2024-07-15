@@ -1,16 +1,22 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainPage } from "pages/main-page";
-import {NotFoundPage} from "pages/not-found";
+import { NotFoundPage } from "pages/not-found";
+import { Layout } from "pages/layout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <MainPage />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <MainPage />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
+      },
+    ],
   },
-  {
-    path: "*",
-    element: <NotFoundPage />
-  }
 ]);
 
 export const App = () => {
