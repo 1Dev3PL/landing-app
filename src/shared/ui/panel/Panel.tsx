@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { ReactNode } from "react";
 
 type TPanelProps = {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
 };
 

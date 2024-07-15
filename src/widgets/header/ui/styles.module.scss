@@ -3,8 +3,7 @@
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 36.26px;
+  padding: 30px 30px 35px 30px;
 
   .header {
     width: 1440px;
@@ -14,12 +13,11 @@
 
     .nav_container {
       display: flex;
-      gap: 2.1875rem;
+      gap: 35px;
 
       .nav_link {
         text-decoration: none;
         font-size: 15px;
-        font-weight: 400;
         color: $text-base;
       }
     }

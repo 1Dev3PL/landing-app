@@ -13,51 +13,50 @@
     .left_column {
       display: flex;
       flex-direction: column;
+      gap: 55px;
+      padding: 40px 50px 40px 50px;
+       box-sizing: border-box;
       flex-basis: 50%;
 
-      .header {
-        padding-left: 46px;
-        padding-right: 200px;
-        font-size: 60px;
-        font-weight: 600;
-        line-height: 63px;
-        letter-spacing: -2%;
-        text-align: left;
-        color: $text-base;
-        margin-bottom: 55px;
+      .title_container {
+        display: flex;
+
+        .title {
+          margin: 0;
+          font-size: 60px;
+          font-weight: 600;
+          line-height: 63px;
+          letter-spacing: -0.02em;
+        }
+
+        .logo_container {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          padding-bottom: 10px;
+        }
       }
 
-      .text_with_logo {
-        display: flex;
-        padding-left: 49px;
-
-        .text {
-          width: 292px;
-          height: 36px;
-          font-size: 17px;
-          font-weight: 400;
-          line-height: 23.8px;
-          letter-spacing: -2%;
-          margin-right: 19px;
-        }
+      .description {
+        font-size: 17px;
+        line-height: 23.8px;
+        letter-spacing: -0.02em;
+        white-space: pre-wrap;
       }
 
       .buttons_container {
         display: flex;
         gap: 10px;
-        padding-top: 72px;
-        padding-left: 50px;
-        padding-bottom: 41px;
       }
     }
   }
 
   .right_column {
-    display: flex;
     flex-basis: 50%;
 
     .video {
       height: 100%;
+      width: 100%;
     }
   }
 
@@ -67,24 +66,22 @@
 
     .small_panel {
       flex-basis: 25%;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       gap: 38px;
+      padding: 30px;
 
-      .icon {
-        width: 31px;
-        height: 35px;
-        padding-top: 30px;
-        padding-left: 30px;
+      .icon_container {
+
+        .icon {
+          width: 31px;
+        }
       }
 
       .text {
-        padding-left: 30px;
-        padding-bottom: 30px;
-        padding-right: 49px;
         color: $text-base;
         font-size: 14px;
-        font-weight: 400;
         line-height: 19.6px;
       }
     }

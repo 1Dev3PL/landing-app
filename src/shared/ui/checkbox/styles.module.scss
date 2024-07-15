@@ -2,7 +2,6 @@
 
 .container {
   font-size: 16px;
-  font-weight: 400;
   line-height: 19.36px;
   letter-spacing: -0.03em;
   color: #727272;
@@ -13,6 +12,7 @@
 
   .checkbox {
     box-sizing: border-box;
+    flex-shrink: 0;
     width: 10px;
     height: 10px;
     margin: 5px;

@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { FractionLabel } from "shared/ui/fraction-label/FractionLabel.tsx";
 import { Button } from "shared/ui/button/Button.tsx";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 type TCardProps = {
   imgSrc: string;
@@ -12,7 +13,7 @@ type TCardProps = {
   productGroupId: number;
 };
 
-export const CatalogCard = (props: TCardProps) => {
+export const CatalogCard = React.memo((props: TCardProps) => {
   const { imgSrc, title, description, fractions, productGroupId } = props;
   const navigate = useNavigate();
 
@@ -25,20 +26,24 @@ export const CatalogCard = (props: TCardProps) => {
       <div className={styles.image_container}>
         <img className={styles.image} src={imgSrc} alt={"productImage"} />
       </div>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.description}>{description}</div>
-      <div className={styles.fractions_container}>
-        {fractions.map((fr, idx) => (
-          <FractionLabel key={idx} label={fr} />
-        ))}
-        <Button
-          color={"ultramarine"}
-          size={"small"}
-          onClick={() => handleButtonClick()}
-        >
-          Все виды
-        </Button>
+      <div className={styles.content_container}>
+        <div className={styles.upper_content}>
+          <div className={styles.title}>{title}</div>
+          <div className={styles.description}>{description}</div>
+        </div>
+        <div className={styles.fractions_container}>
+          {fractions.map((fr, idx) => (
+            <FractionLabel key={idx} label={fr} />
+          ))}
+          <Button
+            color={"ultramarine"}
+            size={"small"}
+            onClick={() => handleButtonClick()}
+          >
+            Все виды
+          </Button>
+        </div>
       </div>
     </Panel>
   );
-};
+});

@@ -21,8 +21,7 @@ export const Contacts = (props: TContactProps) => {
           <div className={styles.container_upper}>
             <div className={styles.header}>Юридический адрес:</div>
             <div className={styles.text}>
-              198188, город Санкт-Петербург, вн. тер. г., муниципальный округ
-              Автово, ул. Возрождения, д. 31, лит. А, оф. 308В
+              {"198188, город Санкт-Петербург, вн. тер. г., муниципальный\nокруг Автово, ул. Возрождения, д. 31, лит. А, оф. 308В"}
             </div>
           </div>
           <div className={styles.container_lower}>
@@ -58,7 +57,7 @@ export const Contacts = (props: TContactProps) => {
             <div className={styles.requisite_items_right}>
               <div>
                 <div>40702810232000016755</div>
-                <div>ФИЛИАЛ «САНКТ-ПЕТЕРБУРГСКИЙ» АО «АЛЬФА-БАНК»</div>
+                <div>{"ФИЛИАЛ «САНКТ-ПЕТЕРБУРГСКИЙ»\nАО «АЛЬФА-БАНК»"}</div>
               </div>
               <div>
                 <div>7805813844</div>

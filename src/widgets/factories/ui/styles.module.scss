@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 67px;
+    padding: 40px 30px 40px 30px;
 
     .container_upper {
       display: flex;
@@ -16,7 +17,6 @@
       gap: 35px;
 
       .title {
-        padding: 38px 0 0 32px;
         color: $ultramarine;
         font-size: 30px;
         font-weight: 600;
@@ -27,7 +27,6 @@
       .address {
         display: flex;
         gap: 10px;
-        padding-left: 30px;
 
         .text_with_button {
           display: flex;
@@ -54,10 +53,8 @@
       display: flex;
       flex-direction: column;
       gap: 35px;
-      padding-bottom: 44px;
 
       .subtitle {
-        padding-left: 33px;
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
@@ -69,16 +66,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 9px;
-        padding-left: 30px;
 
         .good {
           border: 1px solid $ultramarine;
           border-radius: 3px;
           padding: 6px 22px 6px 22px;
           background-color: $base-white;
-          color: $text-base;
           font-size: $font-size-main;
-          font-weight: $font-weight-main;
           line-height: 16.94px;
           letter-spacing: -3%;
         }

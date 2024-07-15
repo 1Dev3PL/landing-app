@@ -6,18 +6,20 @@ export const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         <div className={styles.nav_container}>
-          <Link to="/" className={styles.nav_link}>
+          <Link to="/production" className={styles.nav_link}>
             Продукция
           </Link>
-          <Link to="/production" className={styles.nav_link}>
+          <Link to="/delivery" className={styles.nav_link}>
+            Доставка и оплата
+          </Link>
+          <Link to="/about" className={styles.nav_link}>
             О компании
           </Link>
-          <Link to="" className={styles.nav_link}>
-            Контакты
-          </Link>
-          <Link to="" className={styles.nav_link}>
+          <Link to="/contacts" className={styles.nav_link}>
             Контакты
           </Link>
         </div>
