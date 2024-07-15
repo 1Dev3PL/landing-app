@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { MainPage } from "pages/main-page";
 import {NotFoundPage} from "pages/not-found";
+import { DeliveryAndPaymentPage } from "pages/delivery-and-payment-page";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,11 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <NotFoundPage />
+    element: <NotFoundPage />,
+  },
+  {
+    path: "/delivery-and-payment",
+    element: <DeliveryAndPaymentPage />
   }
 ]);
 
