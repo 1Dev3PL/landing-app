@@ -26,31 +26,25 @@ export const DeliveryAndPayment = () => {
         </div>
         <div className={styles.container_lower}>
           <Panel className={styles.small_panel}>
-            <div className={styles.icon}>
+            <div>
               <img src={icon} alt="check" />
             </div>
-            <div className={styles.text}>
-              {"Тягачей с полуприцепами\nтипа «тонар» (до 40 тонн)"}
-            </div>
+            <div>{"Тягачей с полуприцепами\nтипа «тонар» (до 40 тонн)"}</div>
           </Panel>
           <Panel className={styles.small_panel}>
-            <div className={styles.icon}>
+            <div>
               <img src={icon} alt="check" />
             </div>
-            <div className={styles.text}>
-              {"Четырехосных\nсамосвалов (до 40 тонн)"}
-            </div>
+            <div>{"Четырехосных\nсамосвалов (до 40 тонн)"}</div>
           </Panel>
           <Panel className={styles.small_panel}>
-            <div className={styles.icon}>
+            <div>
               <img src={icon} alt="check" />
             </div>
-            <div className={styles.text}>
-              {"Трехосных\nсамосвалов ( до 30 тонн)"}
-            </div>
+            <div>{"Трехосных\nсамосвалов ( до 30 тонн)"}</div>
           </Panel>
           <Panel className={styles.small_panel}>
-            <div className={styles.icon}>
+            <div>
               <img src={icon} alt="check" />
             </div>
             <div className={styles.text_jd}>Ж/д транспорта</div>
