@@ -6,12 +6,15 @@ import image1 from "shared/assets/images/about_1.png";
 import image2 from "shared/assets/images/about_2.png";
 import info from "shared/assets/icons/info.svg";
 import { Panel } from "shared/ui/panel/Panel";
+import {useNavigate} from "react-router-dom";
 
 export const About = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       <BlockHeader title="О компании «Петратерра»" color="ultramarine">
-        <Button color="light_gray">Подробнее о компании</Button>
+        <Button color="light_gray" onClick={() => navigate("/about")}>Подробнее о компании</Button>
       </BlockHeader>
 
       <div className={styles.container_images}>

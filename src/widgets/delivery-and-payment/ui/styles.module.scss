@@ -15,7 +15,7 @@
       gap: 10px;
 
       .container_left {
-        width: 50%;
+        flex-basis: 50%;
         box-sizing: border-box;
 
         .image {
@@ -37,7 +37,7 @@
           font-size: 30px;
           font-weight: 600;
           line-height: 36px;
-          letter-spacing: -3%;
+          letter-spacing: -0.03em;
           color: $text-base;
           white-space: pre-wrap;
         }
@@ -47,7 +47,7 @@
           font-size: 25px;
           font-weight: $font-weight-main;
           line-height: 35px;
-          letter-spacing: -3%;
+          letter-spacing: -0.03em;
           color: $text-base;
           white-space: pre-wrap;
         }
@@ -67,7 +67,7 @@
         font-size: $font-size-main;
         font-weight: $font-weight-main;
         line-height: 19.6px;
-        letter-spacing: -3%;
+        letter-spacing: -0.03em;
         color: $text-base;
         white-space: pre-wrap;
 

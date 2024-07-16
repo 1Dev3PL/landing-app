@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
 import styles from "./styles.module.scss";
 
 type TContentProps = {
-  children: ReactNode;
+  children?: React.ReactNode;
 };
 
 export const Content = (props: TContentProps) => {

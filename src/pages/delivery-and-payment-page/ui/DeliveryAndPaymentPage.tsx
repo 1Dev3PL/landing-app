@@ -16,7 +16,6 @@ import { Feedback } from "widgets/feedback";
 export function DeliveryAndPaymentPage() {
   return (
     <div>
-      <Header />
       <Content>
         <DeliveryAndPayment />
         <div className={styles.container}>
@@ -47,7 +46,6 @@ export function DeliveryAndPaymentPage() {
         <Contacts office={office} />
         <Feedback />
       </Content>
-      <Footer />
     </div>
   );
 }

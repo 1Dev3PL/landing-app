@@ -1,4 +1,3 @@
-import styles from "./styles.module.scss";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 type TPlacemark = {
@@ -18,10 +17,9 @@ type TMapProps = {
 export const MapComponent = (props: TMapProps) => {
   const { placemarks, centerCoords, zoom, handlePlacemarkClick } = props;
   return (
-    <div className={styles.container}>
+    <div>
       <YMaps>
         <Map
-          className={styles.map}
           width={"100%"}
           height={273}
           state={{
@@ -29,6 +27,7 @@ export const MapComponent = (props: TMapProps) => {
             zoom: zoom,
             controls: ["zoomControl", "fullscreenControl"],
           }}
+          options={{ autoFitToViewport: "always" }}
           modules={["control.ZoomControl", "control.FullscreenControl"]}
         >
           {placemarks.map((placemark) => (
@@ -36,7 +35,9 @@ export const MapComponent = (props: TMapProps) => {
               key={placemark.id}
               geometry={[placemark.latitude, placemark.longitude]}
               modules={["geoObject.addon.balloon"]}
-              onClick={() => handlePlacemarkClick && handlePlacemarkClick(placemark.id)}
+              onClick={() =>
+                handlePlacemarkClick && handlePlacemarkClick(placemark.id)
+              }
               properties={{
                 balloonContentBody: `${placemark.description}`,
               }}

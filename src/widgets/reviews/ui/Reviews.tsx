@@ -58,10 +58,7 @@ export const Reviews = (props: TReviewsProps) => {
                     alt={"companyLogo"}
                   />
                 </div>
-                <div
-                  className={styles.review_text}
-                  dangerouslySetInnerHTML={{ __html: item.text }}
-                />
+                <div className={styles.review_text}>{item.text}</div>
               </div>
               <div className={styles.review_companyName}>
                 {item.companyName}
