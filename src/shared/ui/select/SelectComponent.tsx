@@ -10,11 +10,11 @@ type TSelectFactory = {
 
 type TSelectProps = {
   handleOptionChange: (id: number) => void;
-  factories: TSelectFactory[];
+  items: TSelectFactory[];
   option: number;
 }
 export const SelectComponent = (props: TSelectProps) => {
-  const {handleOptionChange, factories, option} = props;
+  const {handleOptionChange, items, option} = props;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggling = () => {
@@ -29,7 +29,7 @@ export const SelectComponent = (props: TSelectProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.header} onClick={toggling}>
-        {factories[option].title}
+        {items[option].title}
         <div className={styles.container_icon}>
           <img
             src={arrowIcon}
@@ -41,7 +41,7 @@ export const SelectComponent = (props: TSelectProps) => {
       {isOpen && (
         <div className={styles.container_dropdown}>
           <ul className={styles.dropdown_list}>
-            {factories.map((factory) => (
+            {items.map((factory) => (
               <li
                 key={factory.id}
                 onClick={() => onOptionClicked(factory.id)}

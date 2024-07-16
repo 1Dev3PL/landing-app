@@ -35,7 +35,7 @@ export const Feedback = () => {
     <div className={styles.container}>
       <BlockHeader title={"Обратная связь"} color={"ultramarine"} />
       <Panel className={styles.form_container}>
-        <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form_column}>
             <div className={styles.form_column_title}>Контактные данные</div>
             <div className={styles.form_column_block}>
@@ -44,7 +44,7 @@ export const Feedback = () => {
                 name={"fullName"}
                 value={formData.fullName}
                 placeholder={"Ваше имя"}
-                onChange={(e) => handleChange(e)}
+                onChange={handleChange}
               />
             </div>
             <div className={styles.form_column_block}>
@@ -56,7 +56,7 @@ export const Feedback = () => {
                 type={"tel"}
                 value={formData.phoneNumber}
                 placeholder={"+7(999)-999-99-99"}
-                onChange={(e) => handleChange(e)}
+                onChange={handleChange}
               />
             </div>
             <div className={styles.form_column_block}>
@@ -67,14 +67,14 @@ export const Feedback = () => {
                 name={"companyName"}
                 value={formData.companyName}
                 placeholder={"Название вашей компании"}
-                onChange={(e) => handleChange(e)}
+                onChange={handleChange}
               />
               <Textarea
                 name={"address"}
                 value={formData.address}
                 placeholder={"Ваш почтовый адрес"}
                 className={styles.form_address_textarea}
-                onChange={(e) => handleChange(e)}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -91,7 +91,7 @@ export const Feedback = () => {
                   "Например:\nДля чего вам нужны нерудные материалы?\nВ каких объемах?"
                 }
                 className={styles.form_comment_textarea}
-                onChange={(e) => handleChange(e)}
+                onChange={handleChange}
               />
               <Checkbox
                 name={"checkbox"}
@@ -108,7 +108,7 @@ export const Feedback = () => {
                   </span>
                 }
                 checked={isChecked}
-                onChange={() => handleCheck()}
+                onChange={handleCheck}
               />
             </div>
             <div>

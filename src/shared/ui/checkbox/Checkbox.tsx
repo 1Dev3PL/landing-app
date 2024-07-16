@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import React from "react";
+import classNames from "classnames";
 
 type TCheckboxProps = {
   name?: string;
@@ -10,10 +11,10 @@ type TCheckboxProps = {
 };
 
 export const Checkbox = (props: TCheckboxProps) => {
-  const { label, checked, onChange, name } = props;
+  const { label, checked, onChange, name, className } = props;
 
   return (
-    <label className={styles.container}>
+    <label className={classNames(styles.container, className)}>
       <input
         name={name}
         className={styles.checkbox}

@@ -6,6 +6,8 @@ import { useState } from "react";
 import { SelectComponent } from "shared/ui/select/SelectComponent.tsx";
 import { Button } from "shared/ui/button/Button.tsx";
 import { Panel } from "shared/ui/panel/Panel.tsx";
+import { Modal, TestForm } from "shared/ui/modal/ui/Modal.tsx";
+import {QuestionForm} from "shared/ui/question-form/QuestionForm.tsx";
 
 type TFactoriesProps = {
   factories: TPlacemark[];
@@ -14,6 +16,7 @@ type TFactoriesProps = {
 export const Factories = (props: TFactoriesProps) => {
   const { factories } = props;
   const [option, setOption] = useState(0);
+  const [isModalShown, setIsModalShown] = useState(false);
 
   const handleOptionChange = (id: number) => {
     setOption(id);
@@ -22,6 +25,10 @@ export const Factories = (props: TFactoriesProps) => {
   const handlePlacemarkClick = (id: number) => {
     setOption(id);
   };
+
+  const handleModalShownChange = () => {
+    setIsModalShown(prev => !prev);
+  }
 
   const factoriesForMapComponent = factories.map((factory) => ({
     id: factory.id,
@@ -50,12 +57,19 @@ export const Factories = (props: TFactoriesProps) => {
           <div className={styles.address}>
             <SelectComponent
               handleOptionChange={handleOptionChange}
-              factories={factoryTitles}
+              items={factoryTitles}
               option={option}
             />
             <div className={styles.text_with_button}>
               <div className={styles.text}>{factories[option].address}</div>
-              <Button color="ultramarine">Задать вопрос</Button>
+              <Button color="ultramarine" onClick={handleModalShownChange}>
+                Задать вопрос
+              </Button>
+              {isModalShown && (
+                <Modal>
+                  <QuestionForm handleClose={handleModalShownChange} />
+                </Modal>
+              )}
             </div>
           </div>
         </div>
