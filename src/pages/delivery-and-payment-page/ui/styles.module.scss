@@ -1,0 +1,40 @@
+@use "shared/themes/_variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    padding: 40px 0 40px 40px;
+    background-color: $pale-cyan;
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .header_text {
+        font-size: 35px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: $ultramarine;
+      }
+    }
+
+    .main_text {
+      font-size: 20px;
+      letter-spacing: -0.03em;
+      color: #0E7A6C;
+      white-space: pre-wrap;
+    }
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 4px;
+  }
+}

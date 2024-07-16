@@ -1,0 +1,80 @@
+@use "shared/themes/_variables.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .container_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .container_upper {
+      display: flex;
+      gap: 10px;
+
+      .container_left {
+        flex-basis: 50%;
+        box-sizing: border-box;
+
+        .image {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      .container_right {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 46px 0 49px 46px;
+        width: 50%;
+
+        .header {
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 36px;
+          letter-spacing: -0.03em;
+          color: $text-base;
+          white-space: pre-wrap;
+        }
+
+        .text {
+          padding-left: 3px;
+          font-size: 25px;
+          font-weight: $font-weight-main;
+          line-height: 35px;
+          letter-spacing: -0.03em;
+          color: $text-base;
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    .container_lower {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+
+      .small_panel {
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+        padding: 30px 0 30px 30px;
+        font-size: $font-size-main;
+        font-weight: $font-weight-main;
+        line-height: 19.6px;
+        letter-spacing: -0.03em;
+        color: $text-base;
+        white-space: pre-wrap;
+
+        .text_jd {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
